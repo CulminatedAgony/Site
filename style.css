@@ -1,126 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
+html {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
 body {
-  margin:2;
-  padding:1;
-  background: #121212;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(Doubs.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-ul {
-  margin:0;
-  padding:0;
-  display:flex;
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
+main {
+  background-color: rgb(87, 76,	165);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px rgb(224, 205, 239);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
 }
 
-ul li {
-  list-style:none;
-  margin: 0 15px;
+main:hover {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgb(224, 205, 239);
 }
 
-ul li a {
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  background: #171515;
+main div {
+  margin-bottom: 2rem;
+  width: 30vw;
+}
+
+main .profile img {
+  width: 40%;
   border-radius: 50%;
-  font-size: 30px;
-  color: #666;
-  transition: .5s;
+  box-shadow: 10px 6px rgba(224, 205, 239);
+  transition: all .5s ease;
 }
-.github {
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 60px;
+
+main .profile img:hover {
+  cursor: pointer;
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgba(97, 126, 240, 0.671);
+}
+
+main .profile h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}
+
+a div {
+  background-color: rgb(61, 26, 106);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px rgb(206, 177, 74);
   text-align: center;
-  line-height: 60px;
-  background: #171515;
-  border-radius: 50%;
-  font-size: 30px;
-  color: #666;
-  transition: .5s;
 }
 
-ul li a:before {
-  content: '';
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  background: #000000;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
+a div:hover {
+  background-color: rgb(206, 177, 74);
+  box-shadow: 10px 10px rgb(61, 26, 106);
 }
 
-a:before {
-  content: '';
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  background: #000000;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
+a div:hover p {
+  color: black;
 }
 
-ul li a:hover:before {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px #282828;
-  filter: blur(3px);
-}
-.github:hover:before {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px #282828;
-  filter: blur(3px);
+a div img {
+  width: 2rem;
 }
 
-a:hover {
-  color: #ff0000;
-  box-shadow: 0 0 35px #000000;
-  text-shadow: 0 0 15px #000000;
-}
-.github:hover {
-  color: #fff;
-  box-shadow: 0 0 35px #000000;
-  text-shadow: 0 0 15px #000000;
+a div p {
+  display: inline;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -0.5rem;
 }
 
-.bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent url('https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGhvdG9mZWVkbWlzYzE0LW51bm55LTAyXzEucG5n.png?s=iGJqS0fuuuUIvjc3mkLxjaas38MfzJ35wqZaXpbY7TI') repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation .2s infinite;
-  opacity: .9;
-  visibility: visible;
+a div:active {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px rgb(61, 26, 106);
 }
-@keyframes bg-animation {
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) }
-    20% { transform: translate(-10%,5%) }
-    30% { transform: translate(5%,-10%) }
-    40% { transform: translate(-5%,15%) }
-    50% { transform: translate(-10%,5%) }
-    60% { transform: translate(15%,0) }
-    70% { transform: translate(0,10%) }
-    80% { transform: translate(-15%,0) }
-    90% { transform: translate(10%,5%) }
-    100% { transform: translate(5%,0) }
+
+@media (max-width: 900px) {
+  main {
+    width: 80%;
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  main:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  main .profile h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  main .profile img {
+    width: 60%;
+  }
+
+  main .profile img:hover {
+    transform: none;
+    box-shadow: 10px 6px rgba(97, 126, 240, 0.671);
+  }
+
+  main div {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 400px) {
+  main a div p span {
+    display: none;
+  }
 }
